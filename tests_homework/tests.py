@@ -9,7 +9,6 @@ def test_fill__registration_form():
     browser.element("[for='gender-radio-1']").click()
     browser.element('#userNumber').type('9001010800')
     browser.element('#dateOfBirthInput').click()
-    browser.element('#dateOfBirthInput').click()
     browser.element('[class="react-datepicker__month-select"]').click().element('[value="0"]').click()
     browser.element('[class="react-datepicker__year-select"]').click().element('[value="1998"]').click()
     browser.element('[class="react-datepicker__day react-datepicker__day--008"]').click()
