@@ -11,7 +11,7 @@ def test_fill_registration_form():
         gender='Male',
         phone='9001010800',
         day='08',
-        month='0',
+        month='10',
         year='1998',
         subject='Chemistry',
         hobby='Sports',
