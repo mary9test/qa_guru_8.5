@@ -1,5 +1,5 @@
-from qa_guru_8_10.pages.registration_form import RegistrationPage
-from qa_guru_8_10.users import User
+from demoqa_tests.pages.registration_form import RegistrationPage
+from demoqa_tests.data.users import User
 
 
 def test_fill_registration_form():
