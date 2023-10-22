@@ -1,5 +1,5 @@
-from pages.registration_form import RegistrationPage
-from tests_homework.users import User
+from qa_guru_8_10.pages.registration_form import RegistrationPage
+from qa_guru_8_10.users import User
 
 
 def test_fill_registration_form():
