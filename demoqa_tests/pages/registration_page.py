@@ -1,4 +1,4 @@
-import os.path
+from demoqa_tests import resource
 from selene import browser, have
 
 
@@ -34,7 +34,7 @@ class RegistrationForm:
         browser.element("[for='hobbies-checkbox-1']").click()
 
     def fill_picture(self):
-        browser.element('#uploadPicture').send_keys(os.path.abspath('img/img.png'))
+        browser.element('#uploadPicture').type(resource.path('img.png'))
 
     def fill_address(self, address):
         browser.element('#currentAddress').type(address)
@@ -48,7 +48,7 @@ class RegistrationForm:
         browser.element('#react-select-4-input').type(city).press_enter()
 
     def check_result(self):
-        browser.element('#submit').click()
+        browser.element('#submit').press_enter()
 
         browser.element('.table-responsive').all('td:nth-of-type(2)').should(have.texts(
             'Иван Петров',
