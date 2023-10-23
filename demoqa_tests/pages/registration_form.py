@@ -1,5 +1,6 @@
 from selene import browser, have
-import os
+from demoqa_tests import resource
+
 
 class RegistrationPage:
     def open(self):
@@ -20,13 +21,13 @@ class RegistrationPage:
         browser.element(f'.react-datepicker__day--0{user.day_of_birth}').click()
         browser.element('#subjectsInput').type(user.subject).press_enter()
         browser.element("[for='hobbies-checkbox-1']").click()
-        browser.element('#uploadPicture').send_keys(os.path.abspath(user.picture))
+        browser.element('#uploadPicture').type(resource.path(user.picture))
         browser.element('#currentAddress').type(user.address)
         browser.element('#state').click()
         browser.element('#react-select-3-input').type(user.state).press_enter()
         browser.element('#city').click()
         browser.element('#react-select-4-input').type(user.city).press_enter()
-        browser.element('#submit').click()
+        browser.element('#submit').press_enter()
 
     def check_registration(self, user):
         full_name = f'{user.first_name} {user.last_name}'
