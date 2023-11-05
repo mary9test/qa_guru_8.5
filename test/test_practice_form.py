@@ -1,5 +1,6 @@
 from demoqa_tests.pages.registration_form import RegistrationPage
 from demoqa_tests.data.users import User
+import allure
 
 
 def test_fill_registration_form():
@@ -21,6 +22,9 @@ def test_fill_registration_form():
         city='Karnal'
 
     )
-    registration_page.open()
-    registration_page.register_user(user)
-    registration_page.check_registration(user)
+    with allure.step('Открываем страницу регистрации'):
+        registration_page.open()
+    with allure.step('Регистрируем пользователя'):
+        registration_page.register_user(user)
+    with allure.step('Проверяем регистрацию'):
+        registration_page.check_registration(user)
