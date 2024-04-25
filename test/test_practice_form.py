@@ -26,5 +26,5 @@ def test_fill_registration_form():
         registration_page.open()
     with allure.step('Регистрируем пользователя'):
         registration_page.register_user(user)
-    with allure.step('Проверяем регистрацию'):
+    with allure.step('Проверяем регистрацию!'):
         registration_page.check_registration(user)
